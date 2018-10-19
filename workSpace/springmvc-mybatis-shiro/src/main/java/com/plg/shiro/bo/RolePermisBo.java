@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * 角色-权限关联BO
  * 
- * @author Thinkpad
+ * @author admin
  *
  */
 public class RolePermisBo implements Serializable {
@@ -20,7 +20,7 @@ public class RolePermisBo implements Serializable {
 	 * 角色ID
 	 */
 	private Integer roleId;
-	
+
 	/**
 	 * 角色名称
 	 */
@@ -30,7 +30,7 @@ public class RolePermisBo implements Serializable {
 	 * 角色code
 	 */
 	private String roleCode;
-	
+
 	/**
 	 * 权限ID
 	 */
