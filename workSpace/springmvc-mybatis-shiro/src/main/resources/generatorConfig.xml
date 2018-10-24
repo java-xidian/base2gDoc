@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 <generatorConfiguration>
-  <!--数据库驱动路径，一定要引用本地的驱动包，否则会报找不到mysql driver class-->
-  <classPathEntry location="D:\JAVA\maven\repositories\mysql\mysql-connector-java\5.0.4\mysql-connector-java-5.0.4.jar" />	
+  <!--1.1 数据库驱动    数据库驱动路径，一定要引用本地的驱动包，否则会报找不到mysql driver class-->
+  <classPathEntry location="C:\software\mavenRepository\mysql\mysql-connector-java\5.0.4\mysql-connector-java-5.0.4.jar" />	
   <context id="context1">
   	<commentGenerator>
   		<!-- 删除代码中带有 代码生成器的注释信息  -->
   		<property name="suppressAllComments" value="true" />
   		<property name="suppressDate" value="true" />
   	</commentGenerator>
-  
-    <jdbcConnection connectionURL="jdbc:mysql://192.168.1.103:3306/mydb" driverClass="com.mysql.jdbc.Driver" password="rootroot" userId="root" />
+    <!--1.2 数据库链接地址账号密码-->
+    <jdbcConnection connectionURL="jdbc:mysql://192.168.69.156:3306/mydb" driverClass="com.mysql.jdbc.Driver" userId="spb_12xf" password="spb_102Iuqloicmst"  />
+    <!--2.1 生成Model类存放位置-->
     <javaModelGenerator targetPackage="com.plg.shiro.entity" targetProject="springmvc-mybatis-shiro/src/main/java" />
+    <!--2.2 生成映射文件存放位置-->
     <sqlMapGenerator targetPackage="mapper" targetProject="springmvc-mybatis-shiro/src/main/resources" />
+    <!--2.3 生成Dao类存放位置-->
     <javaClientGenerator targetPackage="com.plg.shiro.dao" targetProject="springmvc-mybatis-shiro/src/main/java" type="XMLMAPPER" />
-    
-    <table tableName=""></table>
+    <!--2.4 生成对应表及类名-->
+    <!-- <table tableName=""></table> -->
+    <table tableName="on_test" schema="" enableSelectByExample="false" enableDeleteByExample="false" enableCountByExample="false" enableUpdateByExample="fasle" />
     <!-- <table tableName="om_menu" schema="" enableSelectByExample="false" enableDeleteByExample="false" enableCountByExample="false" enableUpdateByExample="fasle" /> -->
     <!-- <table tableName="om_user" schema="" enableSelectByExample="false" enableDeleteByExample="false" enableCountByExample="false" enableUpdateByExample="fasle" ></table> -->
     <!-- <table tableName="om_role" schema="" enableSelectByExample="false" enableDeleteByExample="false" enableCountByExample="false" enableUpdateByExample="fasle" ></table> -->
